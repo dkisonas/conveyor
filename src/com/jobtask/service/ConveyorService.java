@@ -55,7 +55,7 @@ public class ConveyorService {
     }
 
     private int divertXConsecutiveLoadsToDestination(int destinationIndex, int loadIndex) {
-        for (int j = 0; j < conveyorConfiguration.getConsecutiveLoadsToSingleDestination(); j++) {
+        for (int j = 0; j < conveyorConfiguration.getConsecutiveLoadsToSingleDestination() && loadIndex < loads.size(); j++) {
             tryToDivertLoadToDestination(loads.get(loadIndex), destinations.get(destinationIndex));
             loadIndex++;
         }

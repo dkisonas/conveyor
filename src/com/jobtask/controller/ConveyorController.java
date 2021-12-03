@@ -6,6 +6,7 @@ import com.jobtask.model.enums.DestinationStrategy;
 import com.jobtask.service.ConveyorService;
 
 import java.util.Arrays;
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
