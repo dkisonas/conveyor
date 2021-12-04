@@ -48,8 +48,8 @@ public class ConveyorService {
 
     private void sendLoadsUsingRoundRobinStrategy() {
         int destinationIndex = 1;
-        for (int i = 0; i < loads.size(); i++) {
-            i = divertXConsecutiveLoadsToDestination(destinationIndex, i);
+        for (int loadIndex = 0; loadIndex < loads.size(); loadIndex++) {
+            loadIndex = divertXConsecutiveLoadsToDestination(destinationIndex, loadIndex);
             destinationIndex = switchDestination(destinationIndex);
         }
     }
